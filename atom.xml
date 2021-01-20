@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://steve245270533.github.io</id>
     <title>南先生.js</title>
-    <updated>2021-01-20T12:23:47.527Z</updated>
+    <updated>2021-01-20T12:26:02.217Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://steve245270533.github.io"/>
     <link rel="self" href="https://steve245270533.github.io/atom.xml"/>
@@ -16,14 +16,13 @@
         <link href="https://steve245270533.github.io/post/bian-xie-wang-ye-de-bu-zou/">
         </link>
         <updated>2021-01-20T12:22:48.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="编写网页的步骤">编写网页的步骤</h1>
-<h4 id="1-新建站点文件夹">1. 新建站点文件夹</h4>
+        <content type="html"><![CDATA[<h2 id="1-新建站点文件夹">1. 新建站点文件夹</h2>
 <ol>
 <li>文件夹名称不能是中文</li>
 <li>里面至少应该包含css/js/images三个子文件夹</li>
 <li>里面至少应该包含index.html文件</li>
 </ol>
-<h4 id="2-设置favorites-icon网页图标">2. 设置favorites icon网页图标</h4>
+<h2 id="2-设置favorites-icon网页图标">2. 设置favorites icon网页图标</h2>
 <p>显示在网页选项卡和收藏夹中的图标，我们称之为favicon</p>
 <ol>
 <li>生成网页图标</li>
@@ -37,7 +36,7 @@
 </ol>
 <pre><code>&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
 </code></pre>
-<h4 id="3-添加网站优化的三大标签">3. 添加网站优化的三大标签</h4>
+<h2 id="3-添加网站优化的三大标签">3. 添加网站优化的三大标签</h2>
 <ol>
 <li>网页title标题</li>
 </ol>
@@ -75,7 +74,7 @@
 京东：&lt;meta name=&quot;description&quot; content=&quot;京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。&quot;&gt;
 苏宁：&lt;meta name=&quot;description&quot; content=&quot;苏宁易购-综合网上购物平台，商品涵盖家电、手机、电脑、超市、母婴、服装、百货、海外购等品类。送货更准时、价格更超值、上新货更快，正品行货、全国联保、可门店自提，全网更低价，让您放心去喜欢！&quot; /&gt;
 </code></pre>
-<h4 id="4-导入css-reset-类库">4. 导入CSS Reset 类库</h4>
+<h2 id="4-导入css-reset-类库">4. 导入CSS Reset 类库</h2>
 <ul>
 <li>将所有的浏览器的自带样式重置掉，保持各浏览器渲染的一致性</li>
 </ul>
@@ -89,14 +88,14 @@
 修复浏览器自身的BUG并保证各浏览器的一致性<br>
 优化css可用性：用一些小技巧</p>
 </blockquote>
-<h4 id="5-设置全局通用字体行高">5. 设置全局通用字体行高</h4>
+<h2 id="5-设置全局通用字体行高">5. 设置全局通用字体行高</h2>
 <pre><code>body{
 		font: 12px/1.5em &quot;Microsoft Yahei&quot;,tahoma,arial,&quot;Hiragino Sans GB&quot;;
 		color: #999;
 		background: #f2f2f2;
 	}
 </code></pre>
-<h4 id="6-值得思考的问题优雅降级和渐进增强">6. 值得思考的问题，<code>优雅降级</code>和<code>渐进增强</code></h4>
+<h2 id="6-值得思考的问题优雅降级和渐进增强">6. 值得思考的问题，<code>优雅降级</code>和<code>渐进增强</code></h2>
 <ul>
 <li>渐进增强</li>
 </ul>
