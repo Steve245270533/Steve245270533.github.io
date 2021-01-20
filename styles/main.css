@@ -992,3 +992,11 @@ td {
         font-family: -apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif;
       }
     
+      .post-detail .post .post-content blockquote{
+    padding: 0.4em 0 0 4.2em;
+}
+::selection{
+    background: #f90;
+    color: #fff;
+}
+    
