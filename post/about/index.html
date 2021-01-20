@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>关于 | 南先生.js</title>
-<link rel="shortcut icon" href="https://steve245270533.github.io/favicon.ico?v=1611144682332">
+<link rel="shortcut icon" href="https://steve245270533.github.io/favicon.ico?v=1611144963687">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://steve245270533.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="关于 | 南先生.js - Atom Feed" href="https://steve245270533.github.io/atom.xml">
@@ -28,7 +28,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://steve245270533.github.io">
-  <img class="avatar" src="https://steve245270533.github.io/images/avatar.png?v=1611144682332" alt="">
+  <img class="avatar" src="https://steve245270533.github.io/images/avatar.png?v=1611144963687" alt="">
   </a>
   <h1 class="site-title">
     南先生.js
@@ -123,6 +123,32 @@
 
         
 
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '1d6c1c9df63ce13174c4',
+    clientSecret: '1ca516f7ed102aaec98da6ecf9bc3f7d1ac71535',
+    repo: 'steve245270533.github.io',
+    owner: 'Steve245270533',
+    admin: ['Steve245270533'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
         
 
         <div class="site-footer">
