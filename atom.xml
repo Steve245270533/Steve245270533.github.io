@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://steve245270533.github.io</id>
     <title>南先生.js</title>
-    <updated>2021-03-02T12:34:26.209Z</updated>
+    <updated>2021-03-10T14:00:49.804Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://steve245270533.github.io"/>
     <link rel="self" href="https://steve245270533.github.io/atom.xml"/>
@@ -18,6 +18,145 @@
         <updated>2021-03-02T12:08:11.000Z</updated>
         <content type="html"><![CDATA[<p>知识结构思维导图<br>
 <img src="https://steve245270533.github.io/post-images/1614688377578.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[编写网页的步骤]]></title>
+        <id>https://steve245270533.github.io/post/bian-xie-wang-ye-de-bu-zou/</id>
+        <link href="https://steve245270533.github.io/post/bian-xie-wang-ye-de-bu-zou/">
+        </link>
+        <updated>2021-01-20T12:22:48.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-新建站点文件夹">1. 新建站点文件夹</h2>
+<ol>
+<li>文件夹名称不能是中文</li>
+<li>里面至少应该包含css/js/images三个子文件夹</li>
+<li>里面至少应该包含index.html文件</li>
+</ol>
+<h2 id="2-设置favorites-icon网页图标">2. 设置favorites icon网页图标</h2>
+<p>显示在网页选项卡和收藏夹中的图标，我们称之为favicon</p>
+<ol>
+<li>生成网页图标</li>
+</ol>
+<ul>
+<li>搜索ico图标生成——上传图标——下载生成好的图标（推荐网站：比特虫）</li>
+</ul>
+<ol start="2">
+<li>放到站点目录根目录下</li>
+<li>在head标签中间添加</li>
+</ol>
+<pre><code>&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
+</code></pre>
+<h2 id="3-添加网站优化的三大标签">3. 添加网站优化的三大标签</h2>
+<ol>
+<li>网页title标题</li>
+</ol>
+<ul>
+<li>title是网页第一重要的标签，是搜索引擎了解网页的入口，和对网页主题归属的最佳判断点。</li>
+<li>标题长度：Google(35个中文) 百度(28个中文)</li>
+<li>格式：网站名(产品名)-网站的介绍</li>
+</ul>
+<pre><code>例如：
+&lt;title&gt;淘宝 — 淘！我喜欢&lt;/title&gt;
+&lt;title&gt;京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！&lt;/title&gt;
+&lt;title&gt;苏宁易购(Suning.com)-送货更准时、价格更超值、上新货更快&lt;/title&gt;
+//特点：越先出现的词语，权重越高
+</code></pre>
+<ol start="2">
+<li>Keywords 关键字</li>
+</ol>
+<ul>
+<li>Keywords是页面关键字，是搜索引擎重点关注点之一。</li>
+<li>Keywords应该限制在6-8个关键字左右（其实也可以多个），电商类网站可以多几个。</li>
+</ul>
+<pre><code>例如
+&lt;meta name=&quot;keywords&quot; content=&quot;苏宁易购网上商城,苏宁电器,Suning,手机,电脑,冰箱,洗衣机,相机,数码,家居用品,鞋帽,化妆品,母婴用品,图书,食品,正品行货&quot;/&gt;
+</code></pre>
+<ol start="3">
+<li>Description网站说明</li>
+</ol>
+<ul>
+<li>对于关键词的作用明显降低，但由于很多搜索引擎，仍然大量采用网页的meta标签中描述部分作为搜索结果的<code>“内容摘要”</code>。就是简要说明我们网站是主要做什么的。</li>
+<li>补充在title和keywords中未能充分表述的说明。</li>
+<li>字符数含空格在内不要超过120个汉字。</li>
+<li>描述中出现关键字，与正文内容相关，这部分内容是给人看的，所以要写的很详细，让人感兴趣，吸引用户点击</li>
+</ul>
+<pre><code>例如：
+京东：&lt;meta name=&quot;description&quot; content=&quot;京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。&quot;&gt;
+苏宁：&lt;meta name=&quot;description&quot; content=&quot;苏宁易购-综合网上购物平台，商品涵盖家电、手机、电脑、超市、母婴、服装、百货、海外购等品类。送货更准时、价格更超值、上新货更快，正品行货、全国联保、可门店自提，全网更低价，让您放心去喜欢！&quot; /&gt;
+</code></pre>
+<h2 id="4-导入css-reset-类库">4. 导入CSS Reset 类库</h2>
+<ul>
+<li>将所有的浏览器的自带样式重置掉，保持各浏览器渲染的一致性</li>
+</ul>
+<blockquote>
+<p>推荐<br>
+1.reset.css<br>
+无论是否有用，一律清零<br>
+2.normalize.css<br>
+保护有用的浏览器默认样式而不是完全去掉它们<br>
+一般化的样式：为大部分HTML元素提供<br>
+修复浏览器自身的BUG并保证各浏览器的一致性<br>
+优化css可用性：用一些小技巧</p>
+</blockquote>
+<h2 id="5-设置全局通用字体行高">5. 设置全局通用字体行高</h2>
+<pre><code>body{
+		font: 12px/1.5em &quot;Microsoft Yahei&quot;,tahoma,arial,&quot;Hiragino Sans GB&quot;;
+		color: #999;
+		background: #f2f2f2;
+	}
+</code></pre>
+<h2 id="6-值得思考的问题优雅降级和渐进增强">6. 值得思考的问题，<code>优雅降级</code>和<code>渐进增强</code></h2>
+<ul>
+<li>渐进增强</li>
+</ul>
+<blockquote>
+<p>针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验</p>
+</blockquote>
+<ul>
+<li>优雅降级</li>
+</ul>
+<blockquote>
+<p>一开始就在高级浏览器上构建完整的功能，然后再针对低版本的浏览器进行兼容</p>
+</blockquote>
+<ul>
+<li>建议</li>
+</ul>
+<blockquote>
+<p>现在微软抛弃ie浏览器转而支持edge了，所以我们很多情况下没有必要再时时刻刻想着低版本浏览器了，而是一开始就构建完整的效果，根据实际情况修补低版本浏览器的问题修补时现在最常见的做法就是为低版本浏览器单独制作一个跳转页面(可以下载ietester试试)<br>
+例如<br>
+www.zhihu.com<br>
+www.jd.com<br>
+www.taobao.com</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[程序员行走江湖必备技能🔧]]></title>
+        <id>https://steve245270533.github.io/post/bu-chong-cheng-xu-yuan-bi-bei-ji-neng/</id>
+        <link href="https://steve245270533.github.io/post/bu-chong-cheng-xu-yuan-bi-bei-ji-neng/">
+        </link>
+        <updated>2020-05-13T02:54:12.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="icon图标的使用">icon图标的使用</h2>
+<p>推荐网站：<a href="https://www.iconfont.cn/">iconfont阿里巴巴矢量图标库</a></p>
+<h2 id="markdown语法使用">MarkDown语法使用</h2>
+<p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>
+<strong>优点：</strong></p>
+<ol>
+<li>因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作，对比Word文档更加轻便简洁，不用去考虑字体以及排版问题，通过MarkDown语法编写的文本渲染后会产生一个良好的展示效果。</li>
+<li>操作简单。比如:Word编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而Markdown只需要在标题内容前加#即可</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>需要记一些语法（当然，是很简单。五分钟学会）。</li>
+<li>有些平台不支持Markdown编辑模式。</li>
+</ol>
+<p><a href="https://www.runoob.com/markdown/md-tutorial.html">MarkDown语法教程</a><br>
+<a href="https://www.typora.io/">史上最强MarkDown编辑器——Typora</a></p>
+<h2 id="如何当好一个切图仔">如何当好一个切图仔？</h2>
+<ol>
+<li>在PS中如何切图？</li>
+<li>自动化标注工具<a href="https://www.fancynode.com.cn/pxcook">PxCook像素大厨</a></li>
+</ol>
 ]]></content>
     </entry>
 </feed>
