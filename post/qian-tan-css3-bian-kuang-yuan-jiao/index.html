@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>浅谈CSS3边框圆角 | 南先生.js</title>
-<link rel="shortcut icon" href="https://steve245270533.github.io/favicon.ico?v=1615385136009">
+<link rel="shortcut icon" href="https://steve245270533.github.io/favicon.ico?v=1615385493915">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://steve245270533.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="浅谈CSS3边框圆角 | 南先生.js - Atom Feed" href="https://steve245270533.github.io/atom.xml">
@@ -14,7 +14,7 @@
     <meta name="description" content="现在我们大多数网页界面涉及的元素非常丰富，在CSS3.0还没提出之前可能绝大部分网页的一些显示效果需要用图片做效果，甚至动效还会用到flash。所以请求服务器次数就要明显高于CSS3.0，所以性能和访问就要明显差点。
 
 在这里先给大家欣赏一..." />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="前端" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -23,7 +23,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://steve245270533.github.io">
-  <img class="avatar" src="https://steve245270533.github.io/images/avatar.png?v=1615385136009" alt="">
+  <img class="avatar" src="https://steve245270533.github.io/images/avatar.png?v=1615385493915" alt="">
   </a>
   <h1 class="site-title">
     南先生.js
@@ -86,6 +86,10 @@
                 4 min read
               </span>
               
+                <a href="https://steve245270533.github.io/tag/rjfHM_NQW/" class="post-tag">
+                  # 前端
+                </a>
+              
             </div>
             
             <div class="post-content-wrapper">
@@ -93,13 +97,13 @@
                 <p>现在我们大多数网页界面涉及的元素非常丰富，在CSS3.0还没提出之前可能绝大部分网页的一些显示效果需要用图片做效果，甚至动效还会用到flash。所以请求服务器次数就要明显高于CSS3.0，所以性能和访问就要明显差点。</p>
 <hr>
 <p>在这里先给大家欣赏一下十年前的BAT网页...<br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-12f68662d615a471.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="腾讯.jpg" loading="lazy"><br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-1797b5a115c7053d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="淘宝.jpg" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-12f68662d615a471.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/500/format/webp" alt="腾讯.jpg" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-1797b5a115c7053d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/500/format/webp" alt="淘宝.jpg" loading="lazy"><br>
 如果现在看到这样的网页估计你们会马上关掉（贪玩蓝月既视感，不想和成龙大哥一起攻沙😂 ），当然这只是开个玩笑<br>
 <br><br>
 再看看现在的网页...<br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-df1d898ee54191a4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="腾讯.jpg" loading="lazy"><br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-1389c3754eafe52c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-df1d898ee54191a4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/format/webp" alt="腾讯.jpg" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-1389c3754eafe52c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="" loading="lazy"><br>
 惊呆了有木有！😲😲😲<br>
 这都得益于CSS3强大的特性，不过在这里我不打算继续往大的吹下去了，今天主要谈谈CSS3中的边框圆角<code>border-radius</code><br>
 ##1.基本作用及含义<br>
@@ -117,11 +121,11 @@
 		&lt;div&gt;&lt;/div&gt;
 &lt;/body&gt;
 </code></pre>
-<p><img src="https://upload-images.jianshu.io/upload_images/14939580-ae7d34af7f45f552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="绘制方向" loading="lazy"><br>
-或许看到这里大家对于边框圆角的绘制有一个大概的了解了，通常情况下我们都是这样写的：<code>border-radius:10px;</code>只写一个值其意思就是在盒子的左上 右上 右下 左下区域都是10px的圆角；但如果只写两个或者三个值又该怎么表示呢？例<code>border-radius:20px 0px 10px;</code>其实当省略了某一个角之后,系统会自动参考对角的值<img src="https://upload-images.jianshu.io/upload_images/14939580-b852507929459814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="参考对角.png" loading="lazy"><br>
+<p><img src="https://upload-images.jianshu.io/upload_images/14939580-ae7d34af7f45f552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/236/format/webp" alt="绘制方向" loading="lazy"><br>
+或许看到这里大家对于边框圆角的绘制有一个大概的了解了，通常情况下我们都是这样写的：<code>border-radius:10px;</code>只写一个值其意思就是在盒子的左上 右上 右下 左下区域都是10px的圆角；但如果只写两个或者三个值又该怎么表示呢？例<code>border-radius:20px 0px 10px;</code>其实当省略了某一个角之后,系统会自动参考对角的值<img src="https://upload-images.jianshu.io/upload_images/14939580-b852507929459814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/194/format/webp" alt="参考对角.png" loading="lazy"><br>
 这个例子中就是只设置了左上 右上 右下的值，缺省了左下的值，所以左下的值就会自动参考它对角的值</p>
 <p>如果只是单一设置某一个角的圆角例如<code>border-top-left-radius: 10px 20px;</code>第一个值就是设置在元素水平方向的参考点，第二个值就是设置在元素垂直方向的参考点，具体什么意思呢？上图：<br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-09ee08234db24258.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-09ee08234db24258.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/187/format/webp" alt="image.png" loading="lazy"><br>
 通常的用法是<code>border-top-left-radius: 10px;</code>也就是x的点和y的点都是统一的。<br>
 ##2.实际运用<br>
 平常我们大多数是用在扁平化的设计当中，例如文本框、按钮之类的，但是也可以用在其他地方，大家可以自己试试：</p>
@@ -152,14 +156,14 @@ border-bottom-left-radius: 200px 100px;<br>
 border-bottom-right-radius: 200px 100px;</p>
 <p>注意点：<br>
 当边框圆角的值 &lt;= 边框宽度的时候,外边框是圆角，内边框是直角 例如：border-radius:50px;<br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-9b991cc85da13944.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-9b991cc85da13944.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/262/format/webp" alt="image.png" loading="lazy"><br>
 当边框圆角的值 &gt; 边框宽度的时候,外边框和内边框都会变成圆角 例如：border-radius:70px;<br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-2a802b60b9318556.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" loading="lazy"></p>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-2a802b60b9318556.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/254/format/webp" alt="image.png" loading="lazy"></p>
 <h2 id="跳动爱心">跳动爱心</h2>
 <p>这只是我的思路，当然也会有很多种办法可以实现<br>
-<img src="https://upload-images.jianshu.io/upload_images/14939580-75e952ecb4164adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" loading="lazy"></p>
+<img src="https://upload-images.jianshu.io/upload_images/14939580-75e952ecb4164adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/206/format/webp" alt="image.png" loading="lazy"></p>
 <h2 id="css3动效鸟">CSS3动效鸟</h2>
-<p><img src="https://upload-images.jianshu.io/upload_images/14939580-39489a444583a016.gif?imageMogr2/auto-orient/strip" alt="GIF.gif" loading="lazy"><br>
+<p><img src="https://upload-images.jianshu.io/upload_images/14939580-39489a444583a016.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/708/format/webp" alt="GIF.gif" loading="lazy"><br>
 是不是狂拽酷炫吊炸天呢😄</p>
 <p>喜欢的话就关注码起来吧！<br>
 （ps：以上仅作为个人的认知，如有错误的地方欢迎大家指正）</p>
