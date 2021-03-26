@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://steve245270533.github.io</id>
     <title>南先生.js</title>
-    <updated>2021-03-26T13:36:40.879Z</updated>
+    <updated>2021-03-26T13:39:58.109Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://steve245270533.github.io"/>
     <link rel="self" href="https://steve245270533.github.io/atom.xml"/>
@@ -207,12 +207,12 @@ var Person = function Person() {
 </ul>
 <p><strong>图片懒加载</strong><br>
 一般来说，我们访问网站页面时，其实很多图片并不在首屏中，如果我们都加载的话，相当于是加载了用户不一定会看到图片， 这显然是一种浪费。解决的核心思路就是懒加载：实现方式就是先不给图片设置路径，当图片出现在浏览器可视区域时才设置真正的图片路径。</p>
-<p>实现上就是先将图片路径设置给<code>original-src</code>,当页面不可见时，图片不会加载：</p>
+<p>实现上就是先将图片路径设置给<code>data-src</code>,当页面不可见时，图片不会加载：</p>
 <pre><code class="language-HTML">&lt;img data-src=&quot;https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9eb06680a16044feb794f40fc3b1ac3d~tplv-k3u1fbpfcp-watermark.image&quot; /&gt;
 </code></pre>
 <p>通过监听页面滚动，等页面可见时设置图片<code>src</code>:</p>
 <pre><code class="language-JavaScript">const img = document.querySelector('img')
-img.src = img.getAttribute(&quot;original-src&quot;)
+img.src = img.getAttribute(&quot;data-src&quot;)
 </code></pre>
 <p>如果想使用懒加载，还可以借助一些已有的工具库，例如 aFarkas/lazysizes、verlok/lazyload、tuupola/lazyload 等。<br>
 <strong>css中图片懒加载</strong><br>
